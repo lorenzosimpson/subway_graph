@@ -1,6 +1,6 @@
 import json
 from flask import Flask, jsonify, request
-from subway_graph import SubwayGraph, Station, locations, sg
+from subway_graph import SubwayGraph, Station, locations, sg, locations_upper
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -10,6 +10,11 @@ CORS(app)
 @app.route('/', methods=['GET'])
 def hello():
     response = 'API running'
+    return jsonify(response), 200
+
+@app.route('/stations', methods=['GET'])
+def return_stations():
+    response = locations_upper
     return jsonify(response), 200
 
 @app.route('/route', methods=['POST'])
