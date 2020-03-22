@@ -15,7 +15,7 @@ def route():
     origin = data['origin'].lower()
     destination = data['destination'].lower()
 
-    response = sg.route(origin, destination
+    response = sg.route(origin, destination)
 
     return jsonify(response), 200
 
