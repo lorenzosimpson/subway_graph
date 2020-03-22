@@ -83,7 +83,7 @@ sg.add_connection(locations[4], locations[5])
 sg.add_connection(locations[0], locations[8])
 
 
-print(sg.route(input('Origin: ').lower(), input('Destination: ').lower()))
+
 
 
 
