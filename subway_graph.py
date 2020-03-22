@@ -18,7 +18,7 @@ class SubwayGraph:
     
     def add_connection(self, station_1, station_2):
         if station_1 == station_2:
-            print("Error: Can't connection the same station")
+            print("Error: Can't connect station to itself")
         else:
             self.connections[station_1].add(station_2)
             self.connections[station_2].add(station_1)
