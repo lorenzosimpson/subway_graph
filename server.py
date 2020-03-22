@@ -4,6 +4,11 @@ from subway_graph import SubwayGraph, Station, locations, sg
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def hello():
+    response = 'API running'
+    return jsonify(response), 200
+
 @app.route('/route', methods=['POST'])
 def route():
     data = request.get_json()
