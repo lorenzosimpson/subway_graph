@@ -7,11 +7,6 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route('/', methods=['GET'])
-def hello():
-    response = 'API running'
-    return jsonify(response), 200
-
 @app.route('/stations', methods=['GET'])
 def return_stations():
     response = locations_upper
